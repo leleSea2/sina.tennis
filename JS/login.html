@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <title>注册新浪通信证</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <script type="text/javascript" src="JS/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="JS/login.js"></script>
+  <script type="text/javascript" src="JS/ajax_tool.js"></script>
+  <style type="text/css">
+    li {list-style-type:none;}
+	* {margin:0px;padding:0px;font-size:15px;}
+	body {background:url(picture/blue_sky1.jpg);}
+	 a {text-decoration:none;color:#0A8CD2;}
+	 a:hover{text-decoration:underline;}
+	.top {width:900px;height:70px;margin:0px auto;}
+	.top .logo {margin:26px 0px 0px -10px;float:left;}
+	.top .link {float:right;margin-top:53px;font-size:12px;color:blue;}
+	.bottom {width:900px;height:650px;margin:10px auto;background:white;}
+	.bottom .bottom1 {width:900px;height:60px;border-top:2px solid #FF9000;}
+	.bottom .bottom1 div {width:128px;height:40px;border:1px solid #D9D9D9;float:left;margin:20px 0px 0px 20px;border-bottom:none;}
+	.bottom .bottom1 .border_change {background:white;}
+	.bottom .bottom1 li {margin:12px 0px 0px 32px;}
+	.bottom .bottom2 {width:900px;height:484px;border-top:1px solid #D9D9D9;}
+	.bottom .bottom2 .log_in {float:left;width:266px;height:484px;}
+	.bottom .bottom2 .log_in li {margin:40px 0px 0px 25px;font-size:15px;}
+	.bottom .bottom2 .login {float:left;width:630px;height:360px;position:relative;border-right:1px solid #D9D9D9;}
+	.bottom .bottom2 .login .mobile_info {width:630px;height:484px;position:absolute;}
+	.bottom .bottom2 .login .email_info {width:630px;height:484px;position:absolute;display:none;}
+	.bottom .bottom2 .login .pic {float:left;width:50px;height:434px;margin:50px 0px 0px 30px;}
+	.bottom .bottom2 .login .info {width:550px;height:454px;margin-top:30px;float:left;}
+	.bottom .bottom2 .login .mobile_info table {margin:20px 0px 0px -80px;}
+	.bottom .bottom2 .word {text-align:right;}
+	.bottom .bottom2 .login td {width:170px;height:30px;padding-left:20px;}
+	.bottom .bottom2 .login .user_pas{width:200px;height:30px;}
+	.bottom .bottom2 .login .email_info table {margin:20px 0px 0px -80px;}
+	.bottom .bottom2 .login .email_info table td {width:170px;height:30px;}
+	#vali_user{font-size:12px;}
+	#vali_user div{float:left;}
+	#vali_psw {font-size:12px;}
+	#vali_psw div {float:left;color:red;font-size:12px;}
+	#vali_user_email {font-size:12px;}
+	#vali_user_email div{float:left;}
+	#vali_psw_email{font-size:12px;}
+	#vali_psw_email div{float:left;font-size:12px;}
+	#vali_psw_email a {font-size:12px;}
+	.inside_div div {float:left;}
+	.inside_div input {width:55px;height:32px;}
+	.inside_div li {margin-left:5px;font-size:12px;line-height:32px;color:#0A8CD2;cursor:pointer;}
+	.inside_div li:hover{text-decoration:underline;}
+	.inside_div	{width:150px;}
+	.bottom .bottom2 .login .sms {border:1px solid #A9A9A9;width:170px;height:25px;cursor:pointer;}
+	.bottom .bottom2 .login .sms li {font-size:13px;color:#333333;line-height:25px;padding-left:5px;width:165px;height:25px;}
+	.bottom .bottom2 .login .sms li:hover{background:#A3EC44;color:white;}
+	.bottom .bottom2 .login .login_button {width:190px;height:40px;background:#8CD232;border:1px solid #A9DD65;cursor:pointer;}
+	.bottom .bottom2 .login .login_button:hover{background:#A2EB44;}
+	.bottom .bottom2 .login .login_button li {color:white;font-size:15px;margin-left:60px;line-height:40px;}
+	.bottom .bottom2 .login #code {width:100px;height:34px;border:1px solid red;}
+	.bottom .bottom3 {margin-top:20px;}
+	.bottom .bottom3 .first {width:900px;height:20px;}
+	.bottom .bottom3 .first li{font-size:10px;margin-left:10px;float:left;}
+	.bottom .bottom3 .second {margin:5px 0px 0px 10px;font-size:10px;color:#808080;}
+	.bottom .bottom3 .third {margin:5px 0px 0px 10px;font-size:10px;color:#808080;}
+  </style>
+ </head>
+ <body>
+  <div class="top">
+	<div class="logo">
+		<img src="picture/sina_logo.png" />
+	</div>
+	<div class="link">
+		
+			<span><a href="">新浪首页</a></span>
+			|
+			<span><a href="">帮助</a></span>
+		
+	</div>
+  </div>
+  <div class="bottom">
+	<div class="bottom1">
+		<div class="border_change" onclick="select(this)" onselectstart="return false;" name="mobile">
+			<li>手机注册</li>
+		</div>
+		<div onclick="select(this)" onselectstart="return false;" name="email">
+			<li>邮箱注册</li>
+		</div>
+	</div>
+	<div class="bottom2">
+		<div class="login">
+			<div class="mobile_info">
+				<div class="pic">
+					<img src="picture/login_mobile.jpg">
+				</div>
+				<div class="info">
+					<form action="">
+						<table>
+							<tr>
+								<td class="word"><font style="color:red;">*</font>手机号码：</td>									
+								<td colspan="2"><input type="text" name="username" class="user_pas" onblur="pr_username_tf(this)" onclick="pr_username_re(this)"/></td>
+								<td id="vali_user"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td style="font-size:13px;" colspan="2">使用微博账号直接<a href="">登陆</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="word"><font style="color:red;">*</font>设置密码：</td>									
+								<td colspan="2"><input type="password" name="password" class="user_pas" onblur="pr_username_tf(this)" onclick="pr_username_re(this)" /></td>
+								<td id="vali_psw"></td>
+							</tr>
+							<tr>
+								<td class="word"><font style="color:red;">*</font>兴趣标签：</td>									
+								<td colspan="3">
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />新闻
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />娱乐
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />文化
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />体育
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />IT<br />
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />财经
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />时尚
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />汽车
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />房产
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />生活
+								</td>
+							</tr>
+							<tr>
+								<td class="word"><font style="color:red;">*</font>发短信到手机：</td>									
+								<td colspan="2"> <div class="sms"><li onclick="createAjax()">我要使用注册手机发送短信</li></div></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>									
+								<td colspan="2"><a href="" style="font-size:13px;">《新浪网络服务使用协议》</a></td>
+								<td></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			<div class="email_info">
+			<div class="pic">
+					<img src="picture/login_email.jpg">
+				</div>
+				<div class="info">
+					<form action="">
+						<table>
+							<tr>
+								<td class="word"><font style="color:red;">*</font>邮箱地址：</td>									
+								<td colspan="2"><input type="text" class="user_pas" name="username_email" onblur="pr_username_tf_email(this)" onclick="pr_username_re_mail(this)" /></td>
+								<td id="vali_user_email"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td style="font-size:13px;" colspan="2">使用微博账号直接<a href="">登陆</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="word"><font style="color:red;">*</font>设置密码：</td>									
+								<td colspan="2"><input type="password" name="password_email" class="user_pas" onblur="pr_username_tf_email(this)" onclick="pr_username_re_mail(this)" /></td>
+								<td id="vali_psw_email"></td>
+							</tr>
+							<tr>
+								<td class="word"><font style="color:red;">*</font>兴趣标签：</td>									
+								<td colspan="3">
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />新闻
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />娱乐
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />文化
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />体育
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />IT<br />
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />财经
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />时尚
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />汽车
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />房产
+									<input type="checkbox" style="margin:5px 0px 0px 10px;" />生活
+								</td>
+							</tr>
+							<tr>
+								<td class="word"><font style="color:red;">*</font>验证码：</td>									
+								<td colspan="3" class="inside_div">
+									<div><input type="text" /></div>
+									<div id="code"><img id="code_pic" src="vai_code.php"></div>
+									<div><li onclick="refreash_code()" onselectstart="return false;">看不清？</li></div>
+									<div id="vil_code"></div>
+								</td>
+							</tr>
+							<tr>
+								<td></td>									
+								<td colspan="2"><div class="login_button"><li>立即注册<li></div></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>									
+								<td colspan="2"><a href="" style="font-size:13px;">《新浪网络服务使用协议》</a></td>
+								<td></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="log_in">
+			<li>已有账号，<a href="">直接登录 >></a></li>
+		</div>
+	</div>
+	<div class="bottom3">
+			<div class="first">
+				<ul>
+					<li><a href="">新浪简介</a></li>
+					<li><a href="">About Sina</a></li>
+					<li><a href="">广告服务</a></li>
+					<li><a href="">联系我们</a></li>
+					<li><a href="">招聘信息</a></li>
+					<li><a href="">网站律师</a></li>
+					<li><a href="">SINA English</a></li>
+					<li><a href="">注册</a></li>
+					<li><a href="">产品答疑</a></li>
+				</ul>
+			</div>
+			<div class="second">客户服务电话 400-690-0000 欢迎批评指正</div>
+			<div class="third">Copyright © 1996 - 2016 SINA Corporation, All Rights Reserved 新浪公司 <a href="">版权所有</a></div>
+
+	</div>
+  </div>
+
+ </body>
+	
+  <script type="text/javascript">
+  var ajax_obj;
+
+	$(".bottom .bottom1 div").hover(function(){
+		if(this.className!="border_change"){
+			$(this).css("background-color","#2298F6");
+			$(this).css("cursor","pointer");
+			//alert("aa");
+		}else{
+			$(this).css("cursor","default");
+		}
+	},function(){
+			$(this).css("background-color","");
+		
+	})
+
+	function getAjaxObj(ajax_obj){
+		try{
+		ajax_obj=new XMLHttpRequest();
+	}catch(e){
+			ajax_obj=new ActiveXObject("Microsoft.XMLHTTP");
+		}	
+	}
+
+	function createAjax(){
+		ajax_obj=GetAjaxObj();
+		var url="login_php.php"
+		var data=$("")
+		ajax_obj.open("get",url,true);
+		ajax_obj.onreadystatechange=process;
+		ajax_obj.setRequestHeader("content-type","application/x-www-form-urlencoded");
+		ajax_obj.send();
+	}
+	function process(){
+		document.getElementById("code_pic").
+		ajax_obj.reponseText
+	}
+	
+
+ </script>
+</html>

@@ -1,0 +1,888 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <title> </title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <style type="text/css">
+		 * {margin:0px;padding:0px;}
+		.Top {height:47px;background-color:#FBFBFB;border-style:solid none solid none;border-width:1px;border-color:#C7C7C7;position:relative;}
+		.Top1 {margin-left:175px;width:640px;height:47px;float:left;}
+		.Top2 {width:360px;height:47px;float:left;}
+		.Top1 ul li {height:47px;float:left;text-align:center;font-size:13.5px;padding:0px 15px;line-height:47px;}
+		li {list-style-type:none;}
+		a {text-decoration:none;color:black;font-famile:"宋体";}
+		.Top2 ul li {margin-top:14.5px;list-style-type:none;float:left;text-align:center;font-size:15px;padding:0px 15px;}
+		 a:hover {color:#FF8500;}
+		//.morechange {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding-bottom:17.5px;}
+		//.Top .more a  {padding:16px 25px 20px 25px;}
+		.Top .more {width:80px;height:50px;}
+		.morechange {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding-bottom:18px;padding:15px 24px 20px 24px;}
+		.Top .more1 {border-style:solid;border-color:#C7C7C7;border-width:1px;background:white;}
+		#more2 {width:370px;height:140px;border-style:none solid solid solid;border-color:#C7C7C7;border-width:1px;margin-left:380px;display:none;float:left;background:white;position:absolute;}
+		#more2 li {float:left;line-height:45px;font-size:15px;padding:0px 15px;}
+		#more2 div {border-style:none none dotted none;height:45px;width:370px;border-color:#C7C7C7;border-width:2px;}
+		.Top .Top2 .text-login {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding:16px 29px;}
+		//.Top .Top2 #text-login {padding:16px 30px;}
+		.Top .Top2 .text-login-li {width:93px;height:53px}
+		//.Top .Top2 #text-client{padding:16px;27.5px;}
+		.Top .Top2 .text-client-li {width:134px;height:50px;}
+		.Top .Top2 .text-client{border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding:16px 26.5px;}
+		#login {width:479px;height:296px;border-style:solid;border-width:1px;border-color:#FFC525;margin:-1px 612px;display:none;float:left;background:white;position:absolute;z-index:9999;}
+		#login p b a{font-size:10px;color:#666666;margin-left:467px;}
+		#login a:hover{color:#6600ff;}
+		#login .login-left{float:left; margin-top:5px;}
+		#login .login-left p {font-size:13px;margin:0px 13px;}
+		#login .login-left div {margin:26px 30px;width:183px;border-style:none solid none none;border-width:1px;border-color:#EDEDED;}
+		#login .login-right {margin-top:5px;}
+		#login .login-right p {font-size:13px;}
+		#login .login-right div {margin-top:26px;font-size:16px;}
+		#login .login-right div .text {width:204px;height:29px;color:#A9A9A9;}
+		#login .login-right div .submit {width:66px;height:31px;background:#FF8500;border-width:1px;color:white;font-size:15px;}
+		#login .login-right div font {margin-left:5px;}
+		#login .login-right div .a {color:#A87A2C;font-size:10px;padding:8px;}
+		#login .login-right div a {font-size:10px;}
+		#login .login-right div a:hover{color:#FF8500;}
+		#client {width:128px;height:415px;border-style:dotted solid solid solid;border-width:1px;border-color:#C7C7C7;margin:-1px 0px 0px 1014.5px;display:none;float:left;background:white;position:absolute;}
+		#client div {border-style:none none dotted none;border-width:2px;border-color:#C7C7C7;}
+		#client div table tr td {padding:6px;font-size:15px;}
+		.Nav {width:1000px;height:31px;margin:7px 0px 0px 175px;background:#EBEBEB;}
+		.Nav li {font-size:15px;padding-left:18.5px;line-height:31px;float:left;}
+		.Nav a:hover{color:red;text-decoration:underline;}
+		.ad {width:1000px;height:93px;margin:7px 0px 0px 175px;border-width:1px;border-style:solid;}
+		.ad p  {font-size:50px;line-height:93px;margin-left:450px;}
+		.search {width:1000px;height:40px;margin-left:175px;}
+		.search .img  {float:left;}
+		.search .select {float:left;margin-left:323px;}
+		.search .select li {float:left;line-height:40px;font-size:12px;padding-left:8px;}
+		.search .select a:hover {color:red;text-decoration:underline;}
+		.search div input {height:20px;border-style:solid solid solid none;e;margin-left:-2px;border-width:1px;border-color:#CCCCCC;}
+		.search .search-input {float:left;padding:9px 10px;}
+		.search .search-submit {background:#F0F0F1;margin-left:5px;width:40px;border-style:solid;}
+		.in-nav {width:1000px;height:70px;background:url(picture/nav.jpg);margin:5px 0px 0px 175px;}
+		.in-nav .in-nav-div1 {float:left;width:100px;height:70px;margin-left:70px;}
+		.in-nav .in-nav-div2 {float:left;width:120px;height:70px;margin-left:80px;}
+		.in-nav .in-nav-div3 {float:left;width:140px;height:70px;margin-left:100px;}
+		.in-nav .in-nav-div4 {float:left;width:120px;height:70px;margin-left:90px;}
+		.in-nav .in-nav-div5 {float:left;width:70px;height:70px;margin-left:95px;}
+		.in-nav a:hover{text-decoration:underline;}
+		.in-nav .nav-list-a1 {margin-top:19px;}
+		.in-nav .nav-list-a2 {margin-top:2px;}
+		.in-nav .nav-list-a1 a {color:white;font-weight:bold;padding:2px;font-size:15px;font-family:"宋体";}
+		.in-nav .nav-list-a2 a {color:#82CCE9;padding:2px;font-size:10px;font-family:"宋体";}
+		.in-nav .nav-list-b1 {margin-top:19px;}
+		.in-nav .nav-list-b1 a {color:white;font-weight:bold;padding:2px;font-size:15px;font-family:"宋体";}
+		.in-nav .nav-list-b2 a {color:#82CCE9;padding:2px;font-size:10px;font-family:"宋体";}
+		.in-nav .nav-list-c1 {margin-top:19px;}
+		.in-nav .nav-list-c1 a {color:white;font-weight:bold;padding:2px;font-size:15px;font-family:"宋体";}
+		.in-nav .nav-list-c2 a {color:#82CCE9;padding:2px;font-size:10px;font-family:"宋体";}
+		.in-nav .nav-list-d1 {margin-top:19px;}
+		.in-nav .nav-list-d1 a {color:white;font-weight:bold;padding:2px;font-size:15px;font-family:"宋体";}
+		.in-nav .nav-list-d2 a {color:#82CCE9;padding:2px;font-size:10px;font-family:"宋体";}
+		.in-nav .nav-list-e1 {margin-top:19px;}
+		.in-nav .nav-list-e1 a {color:white;font-weight:bold;padding:2px;font-size:15px;font-family:"宋体";}
+		.in-nav .nav-list-e2 a {color:#82CCE9;padding:2px;font-size:10px;font-family:"宋体";}
+		#rolling {width:600px;height:360px;margin:15px 0px 0px 175px;position:relative;overflow:hidden;float:left;}
+		#rolling .rolling-img {height:360px;position:absolute;}
+		#rolling .rolling-img img {position:absolute;left:600px;width:600px;height:360px;}
+#rolling .rolling-transparent {width:601px;height:54px;background:black;opacity:0.4;filter:alpha(opacity=40);margin-top:307px;position:absolute;bottom:0px;}
+		#rolling .rolling-li  {position:absolute;right:5px;top:307px;float:right;}
+		#rolling .rolling-li li{background:#3E3E3E;margin-left:5px;width:14px;height:14px;float:left;border-radius:7px;cursor:pointer;}
+		#rolling .rolling-word li a:hover{color}
+		#rolling .rolling-li .change{background:#0080C9;margin-left:5px;width:10px;height:10px;border-radius:7px;border-style:solid;border-color:#87CDE9;}
+		#rolling .rolling-arrow-l {position:absolute;width:50px;height:60px;background:black;margin-top:150px;opacity:0.4;filter:alpha(opacity=40);color:white;font-size:50px;line-height:60px;text-align:center;cursor:pointer;}
+		#rolling .rolling-arrow-l li {width:50px;height:60px;}
+		#rolling .rolling-arrow-r {position:absolute;width:50px;height:60px;background:black;margin:150px 0px 0px 550px;opacity:0.4;filter:alpha(opacity=40);color:white;font-size:50px;line-height:60px;text-align:center;cursor:pointer;}
+		#rolling .rolling-arrow-r a {width:50px;height:60px;}
+		#rolling .rolling-arrow-l:hover{opacity:0.8;filter:alpha(opacity=80);}
+		#rolling .rolling-arrow-r:hover{opacity:0.8;filter:alpha(opacity=80);}
+		#rolling .rolling-word {width:3500px;height:360px;position:absolute;top:320px;}
+		#rolling .rolling-word li {float:left;margin-top:0px;position:absolute;}
+		#rolling .rolling-word li a {color:white;font-weight:bold;font-size:20px;}
+		#rolling .rolling-word li a:hover{text-decoration:underline;}
+		.word-left {width:390px;height:370px;margin:20px 0px 0px 785px;}
+		.word-left .word-left-one {height:75px;}
+		.word-left .big a {font-size:20px;font-weight:bold;color:red;margin:0px 0px 0px 5px;}
+		.word-left .big {margin-bottom:10px;}
+		.word-left .small {font-size:12px;float:left;margin:0px 0px 0px 3px;}
+		.word-left .small li {float:left;margin:5px 0px 0px 3px;}
+		.word-left .small li a{color:#252525;}
+		.word-left  a:hover{text-decoration:underline;}
+		.word-left .small li a:hover{color:red;}
+		.word-left .word-left-two {height:75px;margin-top:10px}
+		.word-left .word-left-thr {height:75px;margin-top:10px}
+		.word-left .word-left-b {border-top-style:solid;width:390px;height:100px;border-color:#8DCAE1;margin-top:25px;}
+		.word-left .word-left-b .information {border-style:none solid none solid;width:70px;margin:-12px 0px 0px 10px;background-color:white;border-color:#8DCAE1;border-width:1px;}
+		.word-left .word-left-b .information p {font-size:12px;color:#444444;font-weight:bold;margin-left:9px;}
+		.word-left .word-left-b ul li {width:76px;cursor:pointer;float:left;}
+		.word-left .word-left-b ul li:hover{color:red;}
+		.word-left .word-left-b img {margin-top:10px;}
+		.word-left .word-left-b ul li p {margin-left:17.5px;font-size:10px;}
+		.mw_fo_rw {width:300px;height:380px;float:left;margin:20px 0px 0px 175px;}
+		#move_word {width:300px;height:25px;border-width:1px;border-style:solid;white-space:nowrap;overflow:hidden;border-color:#C7C7C7;}
+		#move_word #move_word_a {width:auto;height:25px;float:left;line-height:25px;}
+		#move_word #move_word_b {width:auto;height:25px;line-height:25px;}
+		#move_word  li {margin-left:2px;display:inline;}
+		#move_word  li a {color:#0195DB;font-size:10px;}
+		#move_word  li a:hover{text-decoration:underline;}
+		.french_open {width:300px;height:180px;border_width:1px;border-color:#DEDEDE;border-width:1px;border-style:none solid solid solid;}
+		.french_open .ATP_WTA {width:148px;height:29px;float:left;background:#ECECEC;}
+		.french_open .ATP_WTA a {font-size:12px;line-height:30px;line-clamp:150px;margin-left:54px;}
+		.french_open .ATP_WTA a:hover{color:red;text-decoration:underline;}
+		.french_open .french_open_li  {width:270px;height:90px;margin:20px 0px 0px 10px;padding-top:32px;}
+		.french_open .french_open_li li {float:left;font-size:12px;margin:10px 0px 0px 5px;}
+		.french_open .french_sign_atp_wta {width:295;height:25px;margin:25px 0px 0px 10px;position:relative;}
+		.french_open .french_sign_atp_wta li {float:left;font-size:12px;line-height:25px;margin-left:5px;}
+		.french_open .french_sign_atp_wta a:hover{color:red;text-decoration:underline;}
+		.french_open .french_sign_atp {position:absolute;}
+		.french_open .french_sign_wta {position:absolute;display:none;}
+		.french_open #changeATP_WTA {border-color:#B8A064;background:white;width:148px;height:29px;float:left;border-style:solid none none none;}
+		.french_open #changeATP_WTA a {font-size:12px;line-height:30px;line-clamp:150px;margin-left:54px;font-weight:bold;}
+		.rolex_watch {width:298px;height:120px;border:2px solid #006039;margin:20px 0px 0px 0px;cursor:pointer;}
+		.rolex_watch .rolex_logo {width:88px;height:65px;float:left;margin:27.5px 0px 0px 10px;}
+		.rolex_watch .rolex_logo img {width:88px;height:65px;}
+		.watch {width:100px;height:100px;float:left;margin:10px 0px 0px 5px;}
+		.watch .watch_div {width:100px;height:100px;border-radius:50%;margin:1.5px 0px 0px 1.5px;position:relative;}
+		.watch .hour {width:26px;height:1px;left:45px;top:48.5px;border:1px solid #0F3C03;position:absolute;transform-origin:5px 50%;}
+		.watch .min {width:31px;height:1px;left:45px;top:48.5px;border:1px solid #0F3C03;position:absolute;transform-origin:5px 50%;}
+		.watch .min .min1 {width:19px;height:1px;background:#0F3C03;float:left;}
+		.watch .hour .hour1 {width:12px;height:1px;background:#0f3C03;float:left;}
+		.watch .hour .hour2 {width:3px;height:1px;background:#0f3C03;float:right;}
+		.watch .sec {width:42px;height:1px;left:40px;top:48.5px;background:#0F3C03;position:absolute;transform-origin:10px 50%;}
+		.rolex_watch .timezone {width:auto;px;height:auto;float:left;margin:27px 0px 0px 18px;}
+		.rolex_watch .timezone li {font-size:13px;font-family:"Arial";color:#05633C;}
+		.rolex_watch .timezone #local_time {color:#A37E2C}
+		.rolex_watch .timezone .interval {margin-top:5px;color:#A37E2C}
+		.ATP_news {width:360px;height:380px;float:left;margin:20px 0px 0px 20px;}
+		.ATP_news .top {width:360px;height:27px;background:#0080C9;border-radius:13.5px 0px 0px 13.5px;}
+		.ATP_news .top .img {float:left;}
+		.ATP_news .top .left {margin-left:10px;float:left;}
+		.ATP_news .top .left a {font-size:23px;color:white;font-weight:bold;font-family:"宋体";}
+		.ATP_news .top a:hover{text-decoration:underline;}
+		.ATP_news .top .right {float:right;margin-top:3px;}
+		.ATP_news .top .right a {font-size:12px;color:#82CCE9;font-family:"宋体";}
+		.ATP_news .new1 {margin-top:10px;}
+		.ATP_news .new1 ul li {list-style-type:square;color:#A5A5A5;list-style-position:inside;margin:12px 0px 0px 10px;font-size:1px;}
+		.ATP_news .new1 a {font-size:14px;font-family:"宋体";color:#252525;}
+		.ATP_news .new1 a:hover{color:red;text-decoration:underline;}
+		.ATP_news .new2 {margin-top:20px;}
+		.ATP_news .new2 ul li {list-style-type:square;color:#A5A5A5;list-style-position:inside;margin:12px 0px 0px 10px;font-size:1px;}
+		.ATP_news .new2 a {font-size:14px;font-family:"宋体";color:#252525;}
+		.ATP_news .new2 a:hover{color:red;text-decoration:underline;}
+		.tennis_fun {width:300px;height:380px;border:1px solid #ECECEC;margin:20px 0px 0px 20px;float:left;}
+		.tennis_fun a:hover{text-decoration:underline;}
+		.tennis_fun .title {width:110px;height:40px;border-style:solid none none none;border-color:#B8A064;margin-top:-1px;background:#FFFFFF;}
+		.tennis_fun .title a {color:#B8A064;font-size:20px;}
+		.tennis_fun .title li {margin:5px 15px;}
+		.tennis_fun .tennis_fun_left {width:130px;315px;float:left;margin-top:5px;}
+		.tennis_fun .tennis_fun1 {width:130px;height:213px;margin-left:19px;}
+		.tennis_fun .tennis_fun1 div {background:#FF47AF;width:130px;height:18px;}
+		.tennis_fun .tennis_fun1 a {font-size:12px;color:white;}
+		.tennis_fun .tennis_fun2 {width:130px;height:102px;margin:5px 19px;}
+		.tennis_fun .tennis_fun2 div {background:#FF47AF;width:130px;height:18px;}
+		.tennis_fun .tennis_fun2 a {font-size:12px;color:white;}
+		.tennis_fun .tennis_fun_right {width:130px;315px;float:left;margin:5px 5px;}
+		.tennis_fun .tennis_fun3 {width:130px;height:102px;margin-left:19px;}
+		.tennis_fun .tennis_fun3 div {background:#FF47AF;width:130px;height:18px;}
+		.tennis_fun .tennis_fun3 a {font-size:12px;color:white;}
+		.tennis_fun .tennis_fun4 {width:130px;height:102px;margin:5px 19px;}
+		.tennis_fun .tennis_fun4 div {background:#FF47AF;width:130px;height:18px;}
+		.tennis_fun .tennis_fun4 a {font-size:12px;color:white;}
+	</style>
+ </head>
+  <body>
+	<div class="Top">
+	  <div class="Top1">
+		<ul>
+		  <li><a href="">新浪首页</a></li>
+		  <li><a href="">新闻</a></li>
+		  <li><a href="">财经</a></li>
+		  <li><a href="">娱乐</a></li>
+		  <li><a href="">科技</a></li>
+		  <li><a href="">博客</a></li>
+		  <li><a href="">图片</a></li>
+		  <li><a href="">专栏</a></li>
+		  <li class="more" ><a id="mo" href="">更多</a></li>
+		  
+		</ul>
+	  </div>
+	  <div class="Top2">
+	    <ul>
+		  <li class="text-login-li"><a href="" id="text-login">登录</a></li>
+		  <li><a href="login.html">注册</a></li>
+		  <li class="text-client-li"><a href="" id="text-client">移动客户端</a></li>
+	   </div>
+	</div>
+	<div id="more2">
+		<div>
+		<ul>
+		  <li><a href="">汽车</a></li>
+		  <li><a href="">教育</a></li>
+		  <li><a href="">时尚</a></li>
+		  <li><a href="">女性</a></li>
+		  <li><a href="">星座</a></li>
+		  <li><a href="">健康</a></li>
+		 </ul>
+		</div>
+		<div>
+		 <ul>
+		  <li><a href="">房产</a></li>
+		  <li><a href="">历史</a></li>
+		  <li><a href="">视频</a></li>
+		  <li><a href="">收藏</a></li>
+		  <li><a href="">育儿</a></li>
+		  <li><a href="">读书</a></li>
+		 </ul>
+		 </div>
+		 <div style="border-style:none;">
+		 <ul>
+		  <li><a href="">佛学</a></li>
+		  <li><a href="">游戏</a></li>
+		  <li><a href="">旅游</a></li>
+		  <li><a href="">邮箱</a></li>
+		  <li><a href="">导航</a></li>
+		  </ul>
+		  </div>
+	</div>
+ <div id="login">
+	 <p><b><a href="">×</a></b></p>
+		<div class="login-left">
+			<p>用微薄客户端扫描安全登录</p>
+			<div>
+				<img src="picture\QR.jpg" />
+			</div>
+		</div>
+		<div class="login-right">
+			<p>新浪微博、博客、邮箱账号，请直接登录</p>
+			<div>
+				<table cellspacing="10">
+				<form>
+					<tr><td><input type="text" value="微博/博客/邮箱/手机号" class="text" onblur="login_onblur(this)" onclick="login_onclick(this)" /></td></tr>
+					<tr><td><input type="password" value="请输入密码" name="password" class="text" onclick="login_onclick(this)" onblur="login_onblur(this)" /></td></tr>
+					<tr><td>
+					<input type="submit" value="登录" class="submit" />
+					<input type="checkbox" class="checkbox" /><font size="1">下次自动登录</font>
+					</td></tr>
+					<tr><td height="10"><a href="" class="a">忘记密码</a><a href="login.html" class="a">立即注册</a></td></tr>
+				</form>
+					<tr><td>
+					<table>
+				<tr><td><p><img src="picture\QQ.jpg" /></td>
+					<td><a href="">使用QQ登录</a></td>
+				</tr>
+				</table>
+					</td></tr>
+				</table>
+			</div>
+		</div>
+</div>
+<!-- 登陆检测 -->
+<script type="text/javascript">
+	function login_onclick(obj){
+		if(obj.value=="微博/博客/邮箱/手机号"|obj.value=="请输入密码"){
+			obj.value="";
+			obj.style.color="black";
+		}
+	}
+	function login_onblur(obj){
+		if(obj.value==""){
+			if(obj.name=="password"){
+				obj.value="请输入密码";
+				obj.style.color="#A9A9A9";
+			}else{
+			obj.value="微博/博客/邮箱/手机号"
+			obj.style.color="#A9A9A9";
+			}
+		}
+	}
+</script>
+
+	<div id="client">
+			<div><table><tr><td><img src="picture\P1.jpg"></td><td><a href="">新浪微博</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P2.jpg"></td><td><a href="">新浪新闻</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P3.jpg"></td><td><a href="">新浪体育</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P4.jpg"></td><td><a href="">新浪娱乐</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P5.jpg"></td><td><a href="">新浪财经</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P6.jpg"></td><td><a href="">新浪博客</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P7.jpg"></td><td><a href="">新浪视频</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P8.jpg"></td><td><a href="">新浪游戏</a></td></tr></table></div>
+			<div style="border-bottom-style:none"><table><tr><td><img src="picture\P9.jpg"></td><td><a href="">天气通</a></td></tr></table></div>
+	</div>
+<!-- 顶部JS代码 -->
+<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".more").hover(
+		function(){
+			$("#mo").addClass('morechange');
+			$("#more2").show();
+				  },function(){
+			$("#mo").removeClass('morechange');
+			$("#more2").hide();
+			});
+	$("#more2").hover(function(){
+		$('#mo').addClass('morechange');
+		$(this).show();},function(){
+			$('#mo').removeClass('morechange');
+			$(this).hide();
+			});
+	$("#text-login").hover(function(){
+		$(this).addClass("text-login");
+		$("#login").show();},
+		function(){
+			$(this).removeClass("text-login");
+			$("#login").hide();
+		})
+	$("#login").hover(function(){
+		$("#text-login").addClass("text-login");
+		$(this).show();},
+		function(){
+			$("#text-login").removeClass("text-login");
+			$(this).hide();
+		})
+		$("#text-client").hover(function(){
+			$(this).addClass("text-client");
+			$("#client").show();
+		},function(){
+			$(this).removeClass("text-client");
+			$("#client").hide();
+		})
+		$("#client").hover(function(){
+			$("#text-client").addClass("text-client");
+			$(this).show();
+		},function(){
+			$("#text-client").removeClass("text-client");
+			$(this).hide();
+		})
+})
+	</script>
+	<div class="Nav">
+		<ul>
+			<li><a href="">首页</a></li>
+			<li><a href="">国内</a></li>
+			<li><a href="">国际</a></li>
+			<li><a href="">篮球</a></li>
+			<li><a href="">NBA</a></li>
+			<li><a href="">综合</a></li>
+			<li><a href="">视频</a></li>
+			<li><a href="">图片</a></li>
+			<li><a href="">专题</a></li>
+			<li><a href="">滚动</a></li>
+			<li><a href="">意甲</a></li>
+			<li><a href="">英超</a></li>
+			<li><a href="">西甲</a></li>
+			<li><a href="">网球</a></li>
+			<li><a href="">赛车</a></li>
+			<li><a href="">棋牌</a></li>
+			<li><a href="">高尔夫</a></li>
+			<li><a href="">彩票</a></li>
+			<li><a href="">博客</a></li>
+			<li><a href="">沙龙</a></li>
+		</ul>
+	</div>
+	<div class="ad">
+		<p>广告</p>
+	</div>
+	<div class="search">
+		<div class="img">
+			<a href=""><img src="picture\tennis.jpg" /></a>
+			<img src="picture\rolex.jpg" />
+		</div>
+		<div class="select">
+			<ul>
+				<li><a href="">中文官网</a></li>
+				<li><a href="">WTA官网</a></li>
+				<li><a href="">ATP官网</a></li>
+			</ul>
+		</div>
+		<div class="search-input">
+				<table>
+				<form>
+					<tr>
+					<td>
+					<img src="picture\search.jpg" />
+					</td>
+					<td>
+					<input type="text" />
+					</td>
+					<td>
+					<select>
+					<option>新闻</option>
+					<option>图片</option>
+					<option>博客</option>
+					<option>视频</option>
+					</select>
+					</td>
+					<td><input type="submit" value="搜索" class="search-submit" />
+					</tr>
+					</form>
+				</table>
+			
+		</div>
+	</div>
+	<div class="in-nav">
+		<div class="in-nav-div1">
+		<ul>
+			<li class="nav-list-a1"><a href="">滚动</a><a href="">高清图</a></li>
+			<li class="nav-list-a2"><a href="">视频</a><a href="">明星</a><a href="">排行</a></li>
+		</ul>
+		</div>
+		 <div class="in-nav-div2">
+		<ul>
+			<li class="nav-list-b1"><a href="">ATP新闻</a><a href="">WTA新闻</a></li>
+			<li class="nav-list-b2"><a href="">中国军团</a><a href="">性感网坛</a></li>
+		</ul>
+		</div>
+		<div class="in-nav-div3">
+		<ul>
+			<li class="nav-list-c1"><a href="">澳网</a><a href="">法网</a><a href="">温网</a><a href="">美网</a></li>
+			<li class="nav-list-c2"><a href="">中网</a><a href="">武网</a><a href="">上海大师赛</a></li>
+		</ul>
+		</div>
+		<div class="in-nav-div4">
+		<ul>
+			<li class="nav-list-d1"><a href="">ATP排名</a><a href="">WTA排名</a></li>
+			<li class="nav-list-d2"><a href="">ATP赛程</a><a href="">WTA赛程</a></li>
+		</ul>
+		</div>
+		<div class="in-nav-div5">
+		<ul>
+			<li class="nav-list-e1"><a href="">微博</a><a href="">博客</a></li>
+			<li class="nav-list-e2"><a href="">行业</a><a href="">比分</a></li>
+		</ul>
+		</div>
+	</div>
+	<div id="rolling">
+	<div class="rolling-img">
+		<div class="rolling-transparent"></div>
+			<a href=""><img src="rolling\5.jpg" style="left:-600px;" /></a>
+			<a href=""><img src="rolling\1.jpg" style="left:0px;" /></a>
+			<a href=""><img src="rolling\2.jpg" style="left:600px;" /></a>
+			<a href=""><img src="rolling\3.jpg" style="left:1200px;" /></a>
+			<a href=""><img src="rolling\4.jpg" style="left:1800px;" /></a>
+			<a href=""><img src="rolling\5.jpg" style="left:2400px;" /></a>
+			<a href=""><img src="rolling\1.jpg" style="left:3000px;" /></a>
+	     </div>
+		//<div class="rolling-transparent"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<div class="rolling-arrow-l" onselectstart="return false;" style="-moz-user-select:none;"><ul><li> < <li></ul></div>
+		<div class="rolling-arrow-r" onselectstart="return false;" style="-moz-user-select:none;"><ul><li> > <li></ul></div>
+		<div class="rolling-li">
+			<ul>
+				<li class="change">&nbsp</li>
+				<li>&nbsp</li>
+				<li>&nbsp</li>
+				<li>&nbsp</li>
+				<li>&nbsp</li>
+			</ul>
+		</div>
+		<div class="rolling-word">
+			<ul>
+				<li style="left:-600px;"><a href="">高清-李娜为武网拍摄宣传片 气质优雅美翻天</a></li>
+				<li style="left:0px;"><a href="">高清-穆雷生日夜完胜小德 首夺罗马赛冠军</a></li>
+				<li style="left:600px;"><a href="">高清-罗马赛小威破冠军荒 搞怪自拍庆祝</a></li>
+				<li style="left:1200px;"><a href="">高清-美好肉体集中营 网坛全裸写真锦集</a></li>
+				<li style="left:1800px;"><a href="">高清-佩内塔举办退役告别仪式 动情落泪</a></li>
+				<li style="left:2400px;"><a href="">高清-李娜为武网拍摄宣传片 气质优雅美翻天</a></li>
+				<li style="left:3000px;"><a href="">高清-穆雷生日夜完胜小德 首夺罗马赛冠军</a></li>
+			</ul>
+		</div>
+	</div>
+<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+	<!-- 滚动图片 -->
+$(function(){
+	var move=0;
+		var index=0;
+		var b_index=0;
+		function start_move(){
+			index=$("#rolling .rolling-li .change").index();
+			move=index*600;
+			if(index==4)
+				$("#rolling .rolling-img").css("left","-2400px");
+			if(index==0)	
+				$("#rolling .rolling-img").css("left","0px");
+			index=(index+1)%5;
+			$("#rolling .rolling-li li").eq(index).addClass("change").siblings().removeClass("change");
+			
+			move+=600;
+			$("#rolling .rolling-img").animate({left:-move},200);
+			$("#rolling .rolling-word").animate({left:-move},200);
+		}
+		$("#rolling .rolling-arrow-r").click(function(){
+			start_move();
+		})
+			$("#rolling .rolling-arrow-l").click(function(){
+			index=$("#rolling .rolling-li .change").index();
+			move=index*-600;
+			index=index-1;
+			if(index<0)
+				{move=-3000
+				$("#rolling .rolling-img").css("left","-3000px");
+				index=4;}			
+				move+=600;
+			$("#rolling .rolling-li li").eq(index).addClass("change").siblings().removeClass("change");
+			
+			$("#rolling .rolling-img").animate({left:move},200);
+			$("#rolling .rolling-word").animate({left:move},200);
+		})
+		$("#rolling .rolling-li li").hover(function(){
+			b_index=$("#rolling .rolling-li .change").index();
+			index=$(this).index();
+			if(index>b_index)
+			{move=index*-600;
+			$("#rolling .rolling-img").animate({left:move},200);
+			$("#rolling .rolling-word").animate({left:move},200);
+			}
+			if(index<b_index)
+			{move=index*-600;
+			$("#rolling .rolling-img").animate({left:move},200);
+			$("#rolling .rolling-word").animate({left:move},200);
+			}
+			$(this).addClass("change").siblings().removeClass("change");
+		},function(){})
+		var move_start=setInterval(start_move,5000);
+		$("#rolling .rolling-img").hover(function(){
+			clearInterval(move_start)
+		},function(){
+			move_start=setInterval(start_move,5000);
+		})
+})
+		</script>
+	<div class="word-left">
+		<div class="word-left-one">
+			<div class="big">
+				<a href="">法网第3日：德纳威扎和3中国金花皆亮相</a>
+			</div>
+			<div class="small">
+				<ul>
+					<li><a href="">A-拉哈勒普均送蛋</a></li>
+					<li><a href="">穆古拉扎三盘逆转</a></li>
+					<li><a href="">NO.1之争：拉德科贝尔皆有机会</a></li>
+					<li><a href="">调查：男女单冠军是谁 中国女网战绩？</a></li>
+					<li><a href="">专家：阿扎无缘八强 小威折桂</a></li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="word-left-two">
+			<div class="big">
+				<a href="">法网第3日：德纳威扎和3中国金花皆亮相</a>
+			</div>
+			<div class="small">
+				<ul>
+					<li><a href="">A-拉哈勒普均送蛋</a></li>
+					<li><a href="">穆古拉扎三盘逆转</a></li>
+					<li><a href="">NO.1之争：拉德科贝尔皆有机会</a></li>
+					<li><a href="">调查：男女单冠军是谁 中国女网战绩？</a></li>
+					<li><a href="">专家：阿扎无缘八强 小威折桂</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="word-left-thr">
+			<div class="big">
+				<a href="">法网第3日：德纳威扎和3中国金花皆亮相</a>
+			</div>
+				<div class="small">
+					<ul>
+						<li><a href="">A-拉哈勒普均送蛋</a></li>
+						<li><a href="">穆古拉扎三盘逆转</a></li>
+						<li><a href="">NO.1之争：拉德科贝尔皆有机会</a></li>
+						<li><a href="">调查：男女单冠军是谁 中国女网战绩？</a></li>
+						<li><a href="">专家：阿扎无缘八强 小威折桂</a></li>
+					</ul>
+				</div>
+			</div>
+		<div class="word-left-b">
+			<div class="information">
+				<p>实用信息</p>
+			</div>
+			<ul>
+				<li>
+				<img src="picture\CC_a_1.jpg" class="T1" />
+				<p>WTA赛程</p>
+				</li>
+				<li>
+				<img src="picture\CC_a_2.jpg" class="T2" />
+				<p>WTA排名</p>
+				</li>
+				<li>
+				<img src="picture\CC_a_3.jpg" class="T3" />
+				<p>ATP赛程</p>
+				</li>
+				<li>
+				<img src="picture\CC_a_4.jpg" class="T4" />
+				<p>ATP排名</p>
+				</li>
+				<li>
+				<img src="picture\CC_a_5.jpg" class="T5" />
+				<p>比分直播</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 改变颜色图片 -->
+<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+	<script type="text/javascript">
+$(function(){
+		
+		$(".word-left .word-left-b ul li").hover(function(){
+			var index_t=$(this).index();		
+			index_t+=1;
+			//alert(index_t);
+			$(".word-left .word-left-b .T"+index_t).attr("src","picture/CC_b_"+index_t+".jpg");
+		},function(){
+			var index_t=$(this).index();		
+			index_t+=1;
+			$(".word-left .word-left-b .T"+index_t).attr("src","picture/CC_a_"+index_t+".jpg");
+		})
+});
+</script>
+	<!-- 滚动文字 -->
+<div class="mw_fo_rw">
+	<div id="move_word">
+	   <span id="move_word_a">
+			<ul>
+				<li><a href="">蒂姆崛起或将改变男网格局 小德赞其为新生代领头者</a></li>
+				<li><a href="">ATP宣布小德入围年终总决赛 连续10年出战冲5连冠</a></li>
+				<li><a href="">瓦林卡偷闲赴现场观赛 搞怪晒照隔空喊话小德(图)</a></li>
+				<li><a href="">蒂姆：比赛中一度曾怀疑自己 坚持单反是正确选择</a></li>
+				<li><a href="">法网第13日看点:小德小威出场 穆雷大战瓦林卡</a></li>
+				<li><a href="">法网为避免空场推白菜价球票 150元看小德半决赛</a></li>
+				<li><a href="">法网第13日赛程:小德PK小鲜肉蒂姆 穆雷战瓦林卡</a></li>
+				<li><a href="">炫腹！穆雷裸上身登杂志封面 大秀六块腹肌(图)</a></li>
+				<li><a href="">费德勒将在下周斯图加特草地赛复出 为温网热身</a></li>
+				<li><a href="">伯蒂奇：第三盘暂停决定与小德无关 组委会应负责</a></li>
+				<li><a href="">小德摔球拍脱手险些砸到裁判 自称幸运已向对方致歉</a></li>
+				<li><a href="">法网男单四强H2H：小德2-0蒂姆 瓦林卡3连胜穆雷</a></li>
+			</ul>
+		</span>
+		<span id="move_word_b"></span>
+	</div>
+		
+	<!-- 正在进行的赛事 -->	
+
+<div class="french_open">
+	<div id="changeATP_WTA" class="ATP_WTA" name="ATP">
+		<a href="">ATP赛程</a>
+	</div>
+	<div class="ATP_WTA" name="WTA">
+		<a href="">WTA赛程</a>
+	</div>
+	<div class="french_open_li">
+		<ul>
+			<li><img src="picture\ball.jpg" /></li>
+			<li><a href="" style="color:#0195DB">法国网球公开赛</a></li>
+			<li>时间：5.22-6.07</li>
+			<li>地点：法国巴黎</li>
+			<li>赛事级别：大满贯</li>
+		</ul>
+	</div>
+	<div class="french_sign_atp_wta">
+	<div class="french_sign_atp">
+		<ul>
+			<li>男单签表</li>
+			<li><a href="" style="margin-left:10px">1/4区</a></li>
+			<li><a href="">2/4区</a></li>
+			<li><a href="">3/4区</a></li>
+			<li><a href="">4/4区</a></li>
+		</ul>
+	</div>
+	<div class="french_sign_wta">
+		<ul>
+			<li>女单签表</li>
+			<li><a href="" style="margin-left:10px">1/4区</a></li>
+			<li><a href="">2/4区</a></li>
+			<li><a href="">3/4区</a></li>
+			<li><a href="">4/4区</a></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+
+	<!-- 劳力士时间 -->
+	<div class="rolex_watch" onselectstart="return false;">
+	<div class="rolex_logo">
+		<img src="picture\rolex_logo.jpg">
+	</div>
+	<div class="watch">
+		<div class="watch_div">
+			<img src="picture\rolex_watch_100.jpg" />
+			<div class="hour" id="hou">
+				<div class="hour1">
+				</div>
+				<div class="hour2">
+				</div>
+			</div>
+			<div class="min" id="min">
+				<div class="min1">
+				</div>
+			</div>
+			<div class="sec" id="sec">
+			</div>
+		</div>
+	</div>
+	<div class="timezone">
+		<ur>
+			<li>GMT</li>
+			<li id="GMT_time"></li>
+			<li class="interval">Your Time</li>
+			<li id="local_time"></li>
+		</ur>
+	</div>
+  </div>
+</div>
+	<!-- 目前赛事 -->
+	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+	<script type="text/javascript">
+		$(".french_open .ATP_WTA").hover(function(){
+			$(this).attr("id","changeATP_WTA").siblings().removeAttr("id");
+			//alert($(this).attr("name"));
+			if($(this).attr("name")=='ATP'){
+			$(".french_open .french_sign_wta").css("display","none");
+			$(".french_open .french_sign_atp").css("display","inline");
+			}else{
+				$(".french_open .french_sign_atp").css("display","none");
+				$(".french_open .french_sign_wta").css("display","inline");
+			}
+		},function(){})
+	</script>
+
+
+	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+	//滚动文字JS
+function auto_scroll(){
+	var move_word=document.getElementById("move_word");
+	var move_word_a=document.getElementById("move_word_a");
+	var move_word_b=document.getElementById("move_word_b");
+	var timer;
+	move_word_b.innerHTML=move_word_a.innerHTML;
+	function scroll_start(){
+		if(move_word.scrollLeft>=move_word_a.offsetWidth){
+			move_word.scrollLeft-=move_word_a.offsetWidth;
+		}else{
+			move_word.scrollLeft++;
+		}
+	}
+	timer=setInterval(scroll_start,20);
+ }
+
+ //劳力士时间JS
+ 	function rolextime(){
+		var hou=document.getElementById("hou");
+		var min=document.getElementById("min");
+		var sec=document.getElementById("sec");
+		var watch_time=new Date();
+		var hour=watch_time.getHours();
+		var minute=watch_time.getMinutes();
+		var second=watch_time.getSeconds();
+		var time_rolex;
+		var GMT_time=document.getElementById("GMT_time");
+		var local_time=document.getElementById("local_time");
+		GMT_time.innerHTML=(hour-7)+":"+minute;
+		function timechange(){
+			var watch_time=new Date();
+			var hour=watch_time.getHours();
+			var minute=watch_time.getMinutes();
+			var second=watch_time.getSeconds();
+			var mingap=watch_time.getTimezoneOffset();
+			var gmthour=Math.abs(Math.floor(mingap/60)+1+hour);
+			var gmtmin=mingap%60+minute;
+			hou.style.transform="rotate("+(gmthour*30+gmtmin*0.5-90)+"deg)";
+			min.style.transform="rotate("+(gmtmin*6-90)+"deg)";;
+			sec.style.transform="rotate("+(second*6-90)+"deg)";
+			if(hour<10){
+				hour="0"+hour;
+			}
+			if(gmthour<10){
+				gmthour="0"+gmthour;
+			}
+			if(minute<10){
+				minute="0"+minute;
+			}
+			if(gmtmin<10){
+				gmtmin="0"+gmtmin;
+			}
+			GMT_time.innerHTML=gmthour+":"+gmtmin;
+			local_time.innerHTML=hour+":"+minute;
+		}
+
+		time_rolex=setInterval(timechange,990);
+	}
+	window.onload=function(){
+		auto_scroll();
+		rolextime();
+	}
+	</script>
+
+	<!-- APT新闻 -->
+	<div class="ATP_news">
+		<div class="top">
+			<ul>
+				<li class="img"><img src="picture\divjpg.jpg" /></li>
+				<li class="left"><a href="">ATP新闻</a></li>
+				<li class="right"><a href="">更多>></a></li>
+			</ul>
+		</div>
+		<div class="new1">
+			<ul>
+				<li><a href="">哈雷赛签表：费德勒冲九冠王 锦织圭伯蒂奇出战</a></li>
+				<li><a href="">女王杯赛签表：穆雷盼卫冕 波特罗火拼伊斯内尔</a></li>
+				<li><a href="">荷兰公开赛大炮对轰战穆勒胜出 与卫冕冠军争冠</a></li>
+				<li><a href="">斯图加特赛本土好手完胜波特罗 将与蒂姆争冠</a></li>
+				<li><a href="">斯图加特赛蒂姆逆转费德勒 生涯首进草地赛决赛</a></li>
+			</ul>
+		</div>
+		<div class="new2">
+			<ul>
+				<li><a href="">弗格尼尼佩内塔喜结连理 网坛好友现场送祝福</a></li>
+				<li><a href="">费德勒生涯胜场数独居NO.2 称被倍感荣幸和动力</a></li>
+				<li><a href="">布雷克：不否认莎娃所取成就 其有明知故犯之嫌</a></li>
+				<li><a href="">穆雷领衔英国奥运网球队 将与哥哥配对出战男双</a></li>
+				<li><a href="">荷兰赛费雷尔遭穆勒逆转 卡洛维奇轰22ACE晋级</a></li>
+				<li><a href="">斯图加特赛费德勒双抢七进四强 将战新星蒂姆</a></li>
+				<li><a href="">前温网冠军加入瓦林卡团队 助其备战草地赛季</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 网坛花絮 -->
+	<div class="tennis_fun">
+		<div class="title">
+			<li><a href="">网坛花絮</a></li>
+		</div>
+		<div class="tennis_fun_left">
+			<div class="tennis_fun1">
+				<img src="picture\tennis_fun1.jpg" />
+				<div>
+					<a href="">莎娃亮相奥斯卡晚宴</a>
+				</div>
+			</div>
+			<div class="tennis_fun2">
+				<img src="picture\tennis_fun2.jpg" />
+				<div>
+					<a href="">沃兹真空上阵玩彩绘</a>
+				</div>
+			</div>
+		</div>
+		<div class="tennis_fun_right">
+			<div class="tennis_fun3">
+				<img src="picture\tennis_fun3.jpg" />
+				<div>
+					<a href="">沃小威性感泳装显丰腴</a>
+				</div>
+			</div>
+			<div class="tennis_fun4">
+				<img src="picture\tennis_fun4.jpg" />
+				<div>
+					<a href="">齐步娃写真湿身诱惑</a>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
